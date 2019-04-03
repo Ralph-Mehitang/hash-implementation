@@ -5,7 +5,8 @@
 using namespace std;
 
 //size_t hashtablex
-size_t hash(size_t x){
+
+size_t hashfunc(size_t x){
 size_t w= 64;
 int p=63;
 int a= 72559;
