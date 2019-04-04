@@ -31,9 +31,26 @@ size_t hashstrin2(string word){
      return hash % size;
 }
 int main(){
-cout<<hex<<hashfunc(11463)<<endl;
-cout<<hashstrin("hello")<<endl;
-cout<<hashstrin2("hello")<<endl;
-cout<<endl;
+int arrt[10];
+for (int i =0; i < 10; i++) {
+int j=rand()%100;
+arrt[i]=j;
+}
+for (int k = 0; k < 10; k++) {
+  cout<<"The hash of "<<hex<<arrt[k]<<" is "<<hashfunc(arrt[k])<<endl;
+}
+cout<<"----------------------------------------------------------"<<endl;
+string values[10] = {"ralph","jennifer","anderson","billy","jessica","rivaldo","sheckan","vinny","emily","judy"};
+for (int i = 0; i <10; i++) {
+
+cout<<"the hash of "<<values[i]<< " is "<<hashstrin(values[i])<<endl;
+}
+cout<<"----------------------------------------------------------"<<endl;
+cout<<"second string hash"<<endl;
+for (int i = 0; i <10; i++) {
+
+cout<<"the hash of "<<values[i]<< " is "<<hashstrin2(values[i])<<endl;
+}
+
   return 0;
 }
