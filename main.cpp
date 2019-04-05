@@ -1,5 +1,4 @@
 #include <iostream>
-//#include "hash.cpp"
 #include <math.h>
 #include <iomanip>
 using namespace std;
@@ -14,7 +13,7 @@ return temp;
 
 }
 size_t hashstrin(string word){
-  int size=501; //setting the max size of hashtable
+  int size=5000; //setting the max size of hashtable
   int sum = 0;
         for (int i = 0; i < word.length(); i++)
             sum = sum + int(word[i]);
@@ -40,10 +39,11 @@ for (int i =0; i < 10; i++) {
 int j=rand()%100;
 arrt[i]=j;
 }
-
+cout<<"------------ Integer Hash Test----------------"<<endl;
 for (int k = 0; k < 10; k++) {
-  cout<<"The hash of "<<arrt[k]<<" is "<<hex<<hashfunc(arrt[k])<<endl;
+  cout<<"The hash of "<<dec<<arrt[k]<<" is "<<hex<<hashfunc(arrt[k])<<endl;
 }
+cout<<"------------ String Hash Test----------------"<<endl;
 cout<<"----------------------------------------------------------"<<endl;
 string values[10] = {"ralph","jennifer","anderson","billy","jessica","rivaldo","sheckan","vinny","emily","judy"};
 for (int i = 0; i <10; i++) {
